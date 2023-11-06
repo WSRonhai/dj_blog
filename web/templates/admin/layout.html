@@ -7,7 +7,8 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//cdn.staticfile.org/layui/2.8.18/css/layui.css" rel="stylesheet">
+  <link href="{% static 'layui/css/layui.css' %}" rel="stylesheet">
+  <link href="{% static 'fontawesome/css/font-awesome.min.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -55,12 +56,11 @@
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree" lay-filter="test">
         <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">menu group 1</a>
+          <a class="" href="javascript:;"><i class="fa fa-cog" style="font-size: 16px; color: #fff;width: 20px"></i><span>系统设置</span></a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">menu 1</a></dd>
-            <dd><a href="javascript:;">menu 2</a></dd>
-            <dd><a href="javascript:;">menu 3</a></dd>
-            <dd><a href="javascript:;">the links</a></dd>
+            <dd><a href="javascript:;"><i class="fa fa-navicon" style="font-size: 16px; color: #fff;width: 20px"></i><span>菜单管理</span></a></dd>
+            <dd><a href="javascript:;"><i class="fa fa-user" style="font-size: 16px; color: #fff;width: 20px"></i><span>角色管理</span></a></dd>
+            <dd><a href="javascript:;"><i class="fa fa-user-md" style="font-size: 16px; color: #fff;width: 20px"></i><span>用户管理</span></a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
@@ -99,7 +99,8 @@
   </div>
 </div>
 
-<script src="//cdn.staticfile.org/layui/2.8.18/layui.js"></script>
+<script src="{% static 'layui/layui.js' %}"></script>
+
 <script>
 //JS
 layui.use(['element', 'layer', 'util'], function(){
